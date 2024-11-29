@@ -1,3 +1,6 @@
-body {
-  background: #171717;
+root{
+  --divbgcolor: #b1a185;
+  --pagebgcolor: #e9e2ce;
+  --tittlecolor: #0b64ad;
+  --lettercolor: #fff;
 }

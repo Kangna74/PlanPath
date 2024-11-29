@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource-variable/merienda':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/roboto':
+        specifier: ^5.1.0
+        version: 5.1.0
     devDependencies:
       eslint:
         specifier: 8.57.0
@@ -221,6 +228,12 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fontsource-variable/merienda@5.1.0':
+    resolution: {integrity: sha512-5SQwBRYHiOVDI/jAPYIlgg8B1DWI1tVIRHU0St4a6om0FLk3qp79vNPUuT+BVFpSiPiKWtpMzwaYS5QTHP1Z1w==}
+
+  '@fontsource/roboto@5.1.0':
+    resolution: {integrity: sha512-cFRRC1s6RqPygeZ8Uw/acwVHqih8Czjt6Q0MwoUoDe9U3m4dH1HmNDRBZyqlMSFwgNAUKgFImncKdmDHyKpwdg==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -1758,6 +1771,10 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@fontsource-variable/merienda@5.1.0': {}
+
+  '@fontsource/roboto@5.1.0': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
