@@ -1,6 +1,83 @@
-root{
+:root{
   --divbgcolor: #b1a185;
   --pagebgcolor: #e9e2ce;
   --tittlecolor: #0b64ad;
   --lettercolor: #fff;
+}
+
+footer {
+  background-color: var(--pagebgcolor);
+  color: var(--tittlecolor);
+  padding: 20px 0;
+  font-family: Roboto, sans-serif;
+}
+
+.footer-container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Karina media", sans-serif;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-nav a {
+  color: var(--tittlecolor);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--lettercolor);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-social a svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--tittlecolor);
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.footer-social .linkedin:hover svg {
+  transform: scale(1.2);
+  fill: #0077b5;
+}
+
+.footer-social .twitter:hover svg{
+  transform: scale(1.2);
+  fill: black;
+}
+
+.footer-social .youtube:hover svg{
+  transform: scale(1.2);
+  fill: #f00;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: grey;
 }
