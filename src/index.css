@@ -1,6 +1,72 @@
-root{
+:root{
   --divbgcolor: #b1a185;
   --pagebgcolor: #e9e2ce;
   --tittlecolor: #0b64ad;
   --lettercolor: #fff;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  background-color: var(--pagebgcolor);
+  color: var(--lettercolor);
+
+}
+
+header{
+  height: 50rem;
+  width: 100%;
+  background-image: url("/img/header-bg.jpg");
+  background-color: var(--divbgcolor);
+  background-size: cover;
+  color: var(--lettercolor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .nav-bar{
+    position: sticky;
+    top: 10px;
+    background-color: var(--divbgcolor);
+    color: var(--lettercolor);
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    img{
+      width: 50px;
+      height: 50px;
+    }
+
+    nav{
+      ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+      }
+
+      a{
+        color: var(--lettercolor);
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      a:hover{
+        background-color: var(--pagebgcolor);
+        color: var(--tittlecolor);
+      }
+
+      
+    }
+  }
 }
