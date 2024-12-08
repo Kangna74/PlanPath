@@ -235,7 +235,7 @@ header{
 }
 
 footer {
-  background-color: var(--pagebgcolor);
+  background-color: var(--divbgcolor);
   color: var(--tittlecolor);
   padding: 20px 0;
   font-family: Roboto, sans-serif;
