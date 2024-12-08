@@ -1,83 +1,175 @@
 :root{
-  --divbgcolor: #b1a185;
-  --pagebgcolor: #e9e2ce;
+  --divbgcolor: #bdaf95;
+  --pagebgcolor: #fdf7e6;
   --tittlecolor: #0b64ad;
   --lettercolor: #fff;
+  --border-radius: 45px;
+  --gen-font-family: roboto, sans-serif;
 }
 
-footer {
-  background-color: var(--pagebgcolor);
+body {
+  margin: 0;
+  font-family: var(--gen-font-family);
   color: var(--tittlecolor);
-  padding: 20px 0;
-  font-family: Roboto, sans-serif;
 }
 
-.footer-container {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  border-bottom: 1px solid #444;
+.content-container { /* main */
+  margin: auto;
+  max-width: 75rem;
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Karina media", sans-serif;
-}
-
-.footer-nav {
+.benefits-content{ /* seccion */
+  width: 100%;
+  background-color: #bdaf9588;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  padding: 25px;
   display: flex;
-  gap: 20px;
-  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  & .short-benefit {
+    text-align: center;
+  
+    & .sbenefit-photos {
+      border-radius: 8px;
+      width: 100%;
+    }
+  
+    & .short-benefit-text {
+      margin: 0;
+      padding-top: 10px;
+      font-weight: 500;
+    }
+  }
 }
 
-.footer-nav a {
-  color: var(--tittlecolor);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
-  color: var(--lettercolor);
-}
-
-.footer-social {
+.about-planpath{
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  padding: 25px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 200px 0;
+
+  & .h2title {
+    font-size: 3rem;
+    font-family: merienda, sans-serif;
+  }
+
+  & .transparent-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.planpath-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+
+  & .pp-content-photos {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 30%;
+  }
+
+  & .text-content{
+    width: 68%;
+    background-color: var(--divbgcolor);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    color: var(--lettercolor);
+    box-shadow: 0 0 10px #0004;
+  
+  }
+}
+
+.invert {
+  flex-direction: row-reverse;
+
+  & .inv-text-content {
+    width: 68%;
+    background-color: var(--divbgcolor);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    color: var(--lettercolor);
+    box-shadow: 0 0 10px #0004;
+  }
+
+  & .inv-pp-content-photos {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 30%;
+  }
+}
+
+.about-us{
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-transparent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 15px;
-}
+  align-items: center;
 
-.footer-social a svg {
-  width: 25px;
-  height: 25px;
-  fill: var(--tittlecolor);
-  transition: transform 0.3s ease, fill 0.3s ease;
-}
+  & .about-text {
+    text-align: center;
+    font-size: 3rem;
+    font-family: merienda, sans-serif;
+    padding: 10px;
+  }
 
-.footer-social .linkedin:hover svg {
-  transform: scale(1.2);
-  fill: #0077b5;
-}
+  & .admin-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+  
+    & .names {
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    & .admin-photos {
+      border-radius: 50%;
+      box-shadow: 0 0 10px #0004;
+      width: 100%;
+    }
+  }
 
-.footer-social .twitter:hover svg{
-  transform: scale(1.2);
-  fill: black;
-}
-
-.footer-social .youtube:hover svg{
-  transform: scale(1.2);
-  fill: #f00;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  color: grey;
+  & .text-container {
+    width: 50%;
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }
