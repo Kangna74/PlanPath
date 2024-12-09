@@ -17,9 +17,9 @@ body {
 }
 
 header{
-  height: 50rem;
+  height: 65rem;
   width: 100%;
-  background-image: url("../public/img/header-bg.jpg");
+  background-image: url("../public/img/header-bg2.jpg");
   background-color: var(--divbgcolor);
   background-size: cover;
   color: var(--lettercolor);
@@ -32,11 +32,9 @@ header{
 
 .nav-bar{
   position: sticky;
-  top: 10px;
   background-color: var(--divbgcolor);
   color: var(--lettercolor);
   width: 100%;
-  padding: 0.8rem;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -49,6 +47,8 @@ header{
   }
 
   nav{
+    padding: 0.8rem;
+
     ul{
       list-style: none;
       display: flex;
@@ -58,19 +58,21 @@ header{
       gap: 10px;
     }
 
-    &a{
+    .nav-button{
       color: var(--lettercolor);
       text-decoration: none;
       padding: 10px;
     }
 
-    &a:hover{
+    .nav-button:hover{
       background-color: var(--pagebgcolor);
       color: var(--tittlecolor);
     }
-
-    
   }
+}
+
+.header-content{
+  margin-top: 25rem;
 }
 
 .content-container { /* main */
