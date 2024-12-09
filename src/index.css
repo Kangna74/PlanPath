@@ -34,50 +34,49 @@ footer {
   display: flex;
   gap: 20px;
   text-align: center;
-}
 
-.footer-nav a {
-  color: var(--tittlecolor);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
+  & a {
+    color: var(--tittlecolor);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 
-.footer-nav a:hover {
-  color: var(--lettercolor);
-}
+    & a:hover {
+      color: var(--lettercolor);
+    }
+  
+  }
 
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 
-.footer-social a svg {
-  width: 25px;
-  height: 25px;
-  fill: var(--tittlecolor);
-  transition: transform 0.3s ease, fill 0.3s ease;
-}
+    & a svg {
+      width: 25px;
+      height: 25px;
+      fill: var(--tittlecolor);
+      transition: transform 0.3s ease, fill 0.3s ease;
 
-.footer-social .linkedin:hover svg {
-  transform: scale(1.2);
-  fill: #0077b5;
-}
+      &   .linkedin:hover svg {
+        transform: scale(1.2);
+        fill: #0077b5;
+      }
 
-.footer-social .twitter:hover svg{
-  transform: scale(1.2);
-  fill: black;
-}
+      & .twitter:hover svg{
+        transform: scale(1.2);
+        fill: black;
+      }
 
-.footer-social .youtube:hover svg{
-  transform: scale(1.2);
-  fill: #f00;
-}
+      &.youtube:hover svg{
+        transform: scale(1.2);
+        fill: #f00;
+      }
 
-.footer-bottom {
-  text-align: center;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  color: grey;
-}
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 10px;
+        color: grey;
+      }
+    }}}
