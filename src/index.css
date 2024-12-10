@@ -237,7 +237,7 @@ header{
 }
 
 footer {
-  background-color: var(--pagebgcolor);
+  background-color: var(--divbgcolor);
   color: var(--tittlecolor);
   padding: 20px 0;
   font-family: Roboto, sans-serif;
@@ -267,47 +267,48 @@ footer {
   text-align: center;
 
   & a {
-    color: var(--tittlecolor);
+    color: var(--lettercolor);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
-
-    & a:hover {
-      color: var(--lettercolor);
-    }
-  
   }
 
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  & a:hover {
+    color: black;
+  }
+}
 
-    & a svg {
-      width: 25px;
-      height: 25px;
-      fill: var(--tittlecolor);
-      transition: transform 0.3s ease, fill 0.3s ease;
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 
-      &   .linkedin:hover svg {
-        transform: scale(1.2);
-        fill: #0077b5;
-      }
+  & a svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--tittlecolor);
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
 
-      & .twitter:hover svg{
-        transform: scale(1.2);
-        fill: black;
-      }
+  & .linkedin:hover {
+    transform: scale(1.2);
+    fill: #0077b5;
+  }
 
-      &.youtube:hover svg{
-        transform: scale(1.2);
-        fill: #f00;
-      }
+  & .twitter:hover {
+    transform: scale(1.2);
+    fill: black;
+  }
 
-      .footer-bottom {
-        text-align: center;
-        font-size: 0.8rem;
-        margin-top: 10px;
-        color: grey;
-      }
-    }}}
+  & .youtube:hover {
+    transform: scale(1.2);
+    fill: #f00;
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: grey;
+}
