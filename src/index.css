@@ -78,7 +78,7 @@ header{
 
 .content-container { /* main */
   margin: auto;
-  max-width: 90rem;
+  max-width: 80rem;
 }
 
 .benefits-content{ /* seccion */
@@ -129,7 +129,7 @@ header{
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: var(--div-letter-color);
+    font-size: 1.2rem;
   }
 }
 
