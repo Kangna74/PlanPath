@@ -5,6 +5,7 @@
   --div-letter-color: #fff;
   --border-radius: 45px;
   --gen-font-family: roboto, sans-serif;
+  --bg-nav-bar: #f2f7fb
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 header{
-  height: min-content;
+  height: max-content;
   width: 100%;
   background-color: #fff;
   color: var(--lettercolor);
@@ -27,14 +28,16 @@ header{
   align-items: center;
 
   .header-content{
-    padding: 10rem;
+    padding: 15rem;
+    margin-top: -7rem;
 
     img {
-      height: 25rem;
+      height: 20rem;
     }
 
     .info{
       button{
+        font-size: large;
         background-color: var(--lettercolor);
         color: var(--div-letter-color);
         padding: 0.5rem 3rem;
@@ -55,7 +58,7 @@ header{
 
 .nav-bar{
   position: sticky;
-  background-color: var(--pagebgcolor);
+  background-color: var(--bg-nav-bar);
   color: var(--lettercolor);
   width: 100%;
   text-align: center;
@@ -64,6 +67,8 @@ header{
   justify-content: space-around;
   align-items: center;
   top: 0;
+  opacity: 95%;
+  z-index: 1;
   border-bottom: 0.2rem solid;
 
   nav{
@@ -75,20 +80,36 @@ header{
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      gap: 10px;
+      gap: 1.3rem;
     }
 
     .nav-button{
       color: var(--lettercolor);
+      border: 0.25rem solid var(--bg-nav-bar);
       text-decoration: none;
       padding: 1rem;
       border-radius: 0.5rem;
+
+      &.nav-main-button{
+        background-color: var(--lettercolor);
+        color: var(--div-letter-color);
+        border: 0.25rem solid var(--lettercolor);
+
+      }
     }
 
     .nav-button:hover{
-      background-color: var(--tittlecolor);
-      color: var(--pagebgcolor);
-      border-radius: 0.5rem;
+      background-color: var(--lettercolor);
+      color: var(--div-letter-color);
+      border: 0.25rem solid var(--lettercolor);
+      border-radius: 0.5rem ;
+
+      &.nav-main-button{
+        background-color: var(--div-letter-color);
+        color: var(--lettercolor);
+        border: 0.25rem solid var(--lettercolor);
+        border-radius: 0.5rem ;
+      }
     }
   }
 }
