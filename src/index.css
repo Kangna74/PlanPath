@@ -25,6 +25,32 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .header-content{
+    padding: 10rem;
+
+    img {
+      height: 25rem;
+    }
+
+    .info{
+      button{
+        background-color: var(--lettercolor);
+        color: var(--div-letter-color);
+        padding: 0.5rem 3rem;
+        font-weight: bold;
+        border: 0.15rem solid;
+        border-radius: 0.5rem;
+
+      }
+
+      button:hover{
+        color: var(--lettercolor);
+        background-color: var(--div-letter-color);
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .nav-bar{
@@ -39,11 +65,6 @@ header{
   align-items: center;
   top: 0;
   border-bottom: 0.2rem solid;
-
-  img{
-    width: 50px;
-    height: 50px;
-  }
 
   nav{
     padding: 0.8rem;
@@ -60,20 +81,16 @@ header{
     .nav-button{
       color: var(--lettercolor);
       text-decoration: none;
-      padding: 10px;
+      padding: 1rem;
       border-radius: 0.5rem;
     }
 
     .nav-button:hover{
-      background-color: var(--pagebgcolor);
-      color: var(--tittlecolor);
+      background-color: var(--tittlecolor);
+      color: var(--pagebgcolor);
       border-radius: 0.5rem;
     }
   }
-}
-
-.header-content{
-  padding: 13rem ;
 }
 
 .content-container { /* main */
