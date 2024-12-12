@@ -8,6 +8,10 @@
   --bg-nav-bar: #f2f7fb
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
