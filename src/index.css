@@ -5,6 +5,11 @@
   --div-letter-color: #fff;
   --border-radius: 45px;
   --gen-font-family: roboto, sans-serif;
+  --bg-nav-bar: #f2f7fb
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,22 +22,47 @@ body {
 }
 
 header{
-  height: 65rem;
+  height: max-content;
   width: 100%;
-  background-image: url("../public/img/header-bg2.jpg");
   background-color: #fff;
-  background-size: cover;
   color: var(--lettercolor);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  .header-content{
+    padding: 15rem;
+    margin-top: -7rem;
+
+    img {
+      height: 20rem;
+    }
+
+    .info{
+      button{
+        font-size: large;
+        background-color: var(--lettercolor);
+        color: var(--div-letter-color);
+        padding: 0.5rem 3rem;
+        font-weight: bold;
+        border: 0.15rem solid;
+        border-radius: 0.5rem;
+
+      }
+
+      button:hover{
+        color: var(--lettercolor);
+        background-color: var(--div-letter-color);
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .nav-bar{
   position: sticky;
-  background-color: var(--divbgcolor);
+  background-color: var(--bg-nav-bar);
   color: var(--lettercolor);
   width: 100%;
   text-align: center;
@@ -41,11 +71,9 @@ header{
   justify-content: space-around;
   align-items: center;
   top: 0;
-
-  img{
-    width: 50px;
-    height: 50px;
-  }
+  opacity: 95%;
+  z-index: 1;
+  border-bottom: 0.2rem solid;
 
   nav{
     padding: 0.8rem;
@@ -56,24 +84,38 @@ header{
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      gap: 10px;
+      gap: 1.3rem;
     }
 
     .nav-button{
       color: var(--lettercolor);
+      border: 0.25rem solid var(--bg-nav-bar);
       text-decoration: none;
-      padding: 10px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+
+      &.nav-main-button{
+        background-color: var(--lettercolor);
+        color: var(--div-letter-color);
+        border: 0.25rem solid var(--lettercolor);
+
+      }
     }
 
     .nav-button:hover{
-      background-color: var(--pagebgcolor);
-      color: var(--tittlecolor);
+      background-color: var(--lettercolor);
+      color: var(--div-letter-color);
+      border: 0.25rem solid var(--lettercolor);
+      border-radius: 0.5rem ;
+
+      &.nav-main-button{
+        background-color: var(--div-letter-color);
+        color: var(--lettercolor);
+        border: 0.25rem solid var(--lettercolor);
+        border-radius: 0.5rem ;
+      }
     }
   }
-}
-
-.header-content{
-  margin-top: 25rem;
 }
 
 .content-container { /* main */
@@ -244,7 +286,7 @@ header{
 }
 
 footer {
-  background-color: var(--divbgcolor);
+  background-color: var(--bg-nav-bar);
   color: var(--tittlecolor);
   padding: 20px 0;
   font-family: Roboto, sans-serif;
