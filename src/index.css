@@ -3,9 +3,10 @@
   --pagebgcolor: #f2f7fb;
   --gen-letter-color: #000;
   --gen-title-color: #0b64ad;
+  --white: #fff;
   --border-radius: 45px;
   --gen-font-family: roboto, sans-serif;
-  --bg-nav-bar: #f2f7fb
+  --bg-nav-bar: #f2f7fb;
   --title-font-size: 3rem;
   --text-font-size: 1.2rem;
 }
@@ -28,8 +29,8 @@ body {
 header{
   height: max-content;
   width: 100%;
-  background-color: #fff;
-  color: var(--lettercolor);
+  background-color: var(--white);
+  color: var(--gen-title-color);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -43,31 +44,30 @@ header{
       height: 20rem;
     }
 
-    .info{
-      button{
-        font-size: large;
-        background-color: var(--lettercolor);
-        color: var(--div-letter-color);
-        padding: 0.5rem 3rem;
-        font-weight: bold;
-        border: 0.15rem solid;
-        border-radius: 0.5rem;
-
-      }
-
-      button:hover{
-        color: var(--lettercolor);
-        background-color: var(--div-letter-color);
-        cursor: pointer;
-      }
-    }
+    /* .info{  } */
   }
+}
+
+.main-button{
+  font-size: large;
+  background-color: var(--gen-title-color);
+  color: var(--white);
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  border: 0.15rem solid;
+  border-radius: 0.5rem;
+}
+
+.main-button:hover{
+  color: var(--gen-title-color);
+  background-color: var(--white);
+  cursor: pointer;
 }
 
 .nav-bar{
   position: sticky;
   background-color: var(--bg-nav-bar);
-  color: var(--lettercolor);
+  color: var(--gen-title-color);
   width: 100%;
   text-align: center;
   display: flex;
@@ -88,34 +88,33 @@ header{
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      gap: 1.3rem;
+      gap: 1.4rem;
     }
 
     .nav-button{
-      color: var(--lettercolor);
-      border: 0.25rem solid var(--bg-nav-bar);
-      text-decoration: none;
+      color: var(--gen-title-color);
       padding: 1rem;
+      border: 0.15rem solid var(--bg-nav-bar);
+      text-decoration: none;
       border-radius: 0.5rem;
 
       &.nav-main-button{
-        background-color: var(--lettercolor);
-        color: var(--div-letter-color);
-        border: 0.25rem solid var(--lettercolor);
-
+        background-color: var(--gen-title-color);
+        color: var(--white);
+        border: 0.15rem solid var(--gen-title-color);
       }
     }
 
     .nav-button:hover{
-      background-color: var(--lettercolor);
-      color: var(--div-letter-color);
-      border: 0.25rem solid var(--lettercolor);
+      background-color: var(--gen-title-color);
+      color: var(--white);
+      border: 0.15rem solid var(--gen-title-color);
       border-radius: 0.5rem ;
 
       &.nav-main-button{
         background-color: var(--div-letter-color);
-        color: var(--lettercolor);
-        border: 0.25rem solid var(--lettercolor);
+        color: var(--gen-title-color);
+        border: 0.15rem solid var(--gen-title-color);
         border-radius: 0.5rem ;
       }
     }
@@ -330,7 +329,7 @@ header{
 
 footer {
   background-color: var(--bg-nav-bar);
-  color: var(--tittlecolor);
+  color: var(--gen-title-color);
   padding: 20px 0;
   font-family: Roboto, sans-serif;
 }
@@ -359,7 +358,7 @@ footer {
   text-align: center;
 
   & a {
-    color: var(--lettercolor);
+    color: var(--gen-title-color);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
