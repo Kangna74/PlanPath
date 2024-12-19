@@ -287,7 +287,8 @@ header{
 }
 
 footer {
-  background-color: var(--bg-nav-bar);
+  /* background-color: var(--bg-nav-bar); */
+  background: linear-gradient(45deg, #333, #555);
   color: var(--tittlecolor);
   padding: 20px 0;
   font-family: Roboto, sans-serif;
@@ -295,20 +296,22 @@ footer {
   & .footer-container {
     display: flex; 
     justify-content: space-between; 
-    align-items: center; 
+    align-items: center;
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
     border-bottom: 1px solid #444;
   }
 
-  & .footer-logo {
+  .footer-logo {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Karina media", sans-serif;
+
   }
 
-  & .footer-nav {
+  .footer-nav {
     display: flex;
     gap: 15px;
   
@@ -316,44 +319,69 @@ footer {
       color: var(--lettercolor);
       text-decoration: none;
       font-size: 0.9rem;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
   
-    & a:hover {
+    a:hover {
       color: black;
+      text-shadow: 0 0 5px rgb(0 0 0 / 30%);
     }
   }
 
-  & .footer-social {
+  .footer-social {
     display: flex;
     gap: 10px;
+    transform: translateX(15px);
+
   
     & a svg {
       width: var(--svg-size);
       height: var(--svg-size);
+
+    }
+
+    a:hover svg{
+      transform: scale(1.2) rotate(10deg);
       transition: transform 0.3s ease, fill 0.3s ease;
     }
   
-    & .linkedin:hover {
-      transform: scale(1.2);
+    a.linkedin:hover svg {
       fill: #0077b5;
     }
   
-    & .twitter:hover {
-      transform: scale(1.2);
+    a.twitter:hover svg {
       fill: black;
     }
   
-    & .youtube:hover {
-      transform: scale(1.2);
+    a.youtube:hover svg {
       fill: #f00;
     }
   }
 
-  & .footer-bottom {
+  .footer-bottom {
     text-align: center;
     font-size: 0.8rem;
     color: grey;
+    margin-top: 20px;
+    padding-top: 10px;
+
+    & .back-to-top {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      background: var(--tittlecolor);
+      color: var(--tittlecolor);
+      border: 1px solid var(--tittlecolor);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    
+    .back-to-top:hover {
+      background: var(--tittlecolor);
+      color: var(--bg-nav-bar);
+      transform: translateY(-3px);
+    }
   }
 }
 
@@ -365,16 +393,15 @@ footer {
 
     & .footer-nav {
       flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-social {
       gap: 10px;
       margin-top: 15px;
     }
 
-    & .footer-social {
-      margin-top: 20px;
-      gap: 10px;
-    }
-
-    & .footer-logo {
+    footer-logo {
       margin-bottom: 10px;
     }
   }
