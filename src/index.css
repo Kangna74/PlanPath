@@ -15,6 +15,7 @@
   --border-radius: 45px;
   --gen-font-family: roboto, sans-serif;
   --bg-nav-bar: #f2f7fb;
+  --svg-size: 25px;
   --title-font-size: 3rem;
   --text-font-size: 1.2rem;
 }
@@ -238,7 +239,7 @@ header{
   } 
 } 
 
-.about-us{
+.about-us {
   width: 100%;
   border-radius: var(--border-radius);
   box-sizing: border-box;
@@ -251,20 +252,99 @@ header{
   & .admin-info-container {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 2rem;
+    gap: 20px;
   
-    & .names {
-      text-align: center;
-      margin-bottom: 10px;
+    & .admin-card {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin: 10px;
+      transition: box-shadow 0.5s ease, transform 0.5s ease;
+      cursor: pointer;
+    }
+  
+    .admin-card:hover {
+      transform: scale(1.2);
+      box-shadow: 0 20px 40px rgb(0 0 0 / 50%);
     }
   
     & .admin-photos {
-      border-radius: 50%;
-      box-shadow: 0 0 10px #0004;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.7s ease, transform 0.7s ease;
+    }
+  
+    .admin-card:hover .admin-photos {
+      filter: grayscale(0) brightness(1.2);
+      transform: scale(1.1);
+    }
+  
+    & .admin-overlay {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 75%) 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0%;
+      transition: opacity 0.5s ease, top 0.5s ease, transform 0.7s ease;
+      border-radius: 50%;
+    }
+  
+    .admin-card:hover .admin-overlay {
+      opacity: 100%;
+      top: 0;
+      transform: scale(1.1);
+    }
+  
+    .admin-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: popin 0.6s ease-out;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .admin-slogan {
+      font-size: 1rem;
+      margin-top: 10px;
+      animation: slideupfade 0.6s ease-out 0.2s;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  
+  @keyframes popin {
+    0% {
+      transform: scale(0.8);
+      opacity: 0%;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes slideupfade {
+    0% {
+      transform: translateY(20px);
+      opacity: 0%;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 100%;
     }
   }
 
@@ -358,34 +438,109 @@ header{
 }
 
 footer {
-  background-color: var(--bg-nav-bar);
-  color: var(--gen-title-color);
+  background: linear-gradient(45deg, rgb(255 255 255 / 56.8%), rgb(200 200 200 / 50.7%), rgb(150 150 150 / 49.3%));
+  color: var(--tittlecolor);
   padding: 20px 0;
   font-family: Roboto, sans-serif;
+
+  & .footer-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Karina media", sans-serif;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 15px;
+  
+    & a {
+      color: var(--lettercolor);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+  
+    a:hover {
+      color: black;
+      text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    }
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+
+    & a svg {
+      width: var(--svg-size);
+      height: var(--svg-size);
+    }
+
+    a:hover svg{
+      transform: scale(1.2) rotate(10deg);
+      transition: transform 0.3s ease, fill 0.3s ease;
+    }
+  
+    a.linkedin:hover svg {
+      fill: #0077b5;
+    }
+  
+    a.twitter:hover svg {
+      fill: black;
+    }
+  
+    a.youtube:hover svg {
+      fill: #f00;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: grey;
+    margin-top: 20px;
+    padding-top: 10px;
+
+    & .back-to-top {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      background: var(--tittlecolor);
+      color: var(--tittlecolor);
+      border: 1px solid var(--tittlecolor);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    
+    .back-to-top:hover {
+      background: var(--tittlecolor);
+      color: var(--bg-nav-bar);
+      transform: translateY(-3px);
+    }
+  }
 }
 
-.footer-container {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  border-bottom: 1px solid #444;
-}
-
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Karina media", sans-serif;
-}
-
-.footer-nav {
-  display: flex;
-  gap: 20px;
-  text-align: center;
+/* Media Query (Responsive Design) */
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
 
   & a {
     color: var(--gen-title-color);
@@ -394,36 +549,68 @@ footer {
     transition: color 0.3s ease;
   }
 
-  & a:hover {
-    color: black;
+  .about-transparent .admin-info-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-transparent .admin-card {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-transparent .text-container {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 20px;
   }
 }
 
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-
-  & a svg {
-    width: 25px;
-    height: 25px;
-    fill: var(--tittlecolor);
-    transition: transform 0.3s ease, fill 0.3s ease;
+@media (max-width: 480px) {
+  .about-us {
+    padding: 10px;
   }
 
-  & .linkedin:hover {
-    transform: scale(1.2);
-    fill: #0077b5;
+  .about-transparent .admin-card {
+    width: 150px;
+    height: 150px;
   }
 
-  & .twitter:hover {
-    transform: scale(1.2);
-    fill: black;
+  .about-transparent .text-container {
+    width: 100%;
+    font-size: 1rem;
   }
 
-  & .youtube:hover {
-    transform: scale(1.2);
-    fill: #f00;
+  footer .footer-logo {
+    font-size: 1.2rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+  }
+
+  .footer-social {
+    gap: 15px;
   }
 }
 
